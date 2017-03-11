@@ -2,9 +2,9 @@ $(document).ready(function(){
 
  $('#signin').on("click",function(){
 
-                console.log($('#fname').val())
+                console.log($('#fullName').val())
                 console.log("clicked")
-                jsRoutes.controllers.SignInController.signInForm($('#uname').val()).ajax({
+                jsRoutes.controllers.SignInController.signInForm($('#userName').val()).ajax({
                             success: function(data){
                               $('#body').html(data);
 

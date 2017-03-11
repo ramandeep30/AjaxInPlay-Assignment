@@ -18,6 +18,6 @@ GET    /signup                      controllers.HomeController.signUp
 
 GET    /signin                      controllers.HomeController.signIn
 
-POST     /welcomeToFamily/*lname           controllers.SignUpController.addAccount(lname,uname,password,repassword,dateOfBitrh,gender)
+POST     /welcomeToFamily/*fullName       controllers.SignUpController.addAccount(fullName,userName,password,ConfirmPassword,dateOfBirth,gender)
 
-GET     /signin/:uname                           controllers.SignInController.signInForm(uname)
+GET     /signin/:userName                 controllers.SignInController.signInForm(userName)

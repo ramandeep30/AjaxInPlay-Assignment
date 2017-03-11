@@ -2,10 +2,10 @@
 
  $('#signUp').on("click",function(){
             /*alert("clicked")*/
-                console.log($('#fname').val())
+                console.log($('#fullName').val())
                 console.log("clicked")
-                jsRoutes.controllers.SignUpController.addAccount($('#fname').val(),$('#uname').val(),
-                                $('#password').val(),$('#repassword').val(),$('#dateOfBitrh').val(),$('#gender').val()).ajax({
+                jsRoutes.controllers.SignUpController.addAccount($('#fullName').val(),$('#userName').val(),
+                                $('#password').val(),$('#confirmPassword').val(),$('#dateOfBirth').val(),$('#gender').val()).ajax({
                             success: function(data){
                               $('#body').html(data);
 

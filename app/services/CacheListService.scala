@@ -9,7 +9,7 @@ import scala.collection.mutable.ListBuffer
 class CacheListService @Inject()(cache: CacheApi) extends Cache {
 
   val listOfAccounts = new ListBuffer[UserData]() += UserData(
-    "Nitin", "nitin20.garg@gmail.com", "password", "password", "20/01/1993", "Male")
+    "Raman", "ramandeep.kaur@gmail.com", "password", "password", "20/01/1993", "Female")
 
   val defaultUser = UserData("","","","","","")
 
@@ -49,43 +49,5 @@ class CacheListService @Inject()(cache: CacheApi) extends Cache {
     if (userList nonEmpty) true
     else false
   }
-
-/*  def getAll(): List[String] = {
-    val list = cache.get[ListBuffer[Accounts]]("Key").map {
-      identity
-    }.getOrElse(ListBuffer())
-    val listOfUsers = list.map(_.uname)
-    listOfUsers.toList
-  }*/
-
-/*  def enable(name: String): String = {
-    val list = cache.get[ListBuffer[Accounts]]("Key").map {
-      identity
-    }.getOrElse(ListBuffer())
-    val user = list.filter(_.uname == name).headOption.map {
-      identity
-    }.getOrElse(defaultUser)
-    list -= user
-    val newuser = user.copy(isEnable = true)
-    list += newuser
-    cache.remove("key")
-    cache.set("key", list)
-    "success enabled"
-  }
-
-  def disable(name: String): String = {
-    val list = cache.get[ListBuffer[Accounts]]("Key").map {
-      identity
-    }.getOrElse(ListBuffer())
-    val user = list.filter(_.uname == name).headOption.map {
-      identity
-    }.getOrElse(defaultUser)
-    list -= user
-    val newuser = user.copy(isEnable = false)
-    list += newuser
-    cache.remove("key")
-    cache.set("key", list)
-    "success disabled"
-  }*/
 
 }
